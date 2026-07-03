@@ -113,7 +113,6 @@ sub WhatsAppMCP_Set {
             return "Kein Empfaenger angegeben und kein defaultRecipient gesetzt."
                 if($recipient eq "");
             # Wenn recipient fehlt, sind alle args die Nachricht
-            $message = join(" ", ($recipient_was_empty_so_all_args_are_msg = $recipient, @args)) if(0);
         }
 
         return "Nachricht darf nicht leer sein." if(!defined($message) || $message eq "");
